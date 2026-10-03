@@ -1,8 +1,8 @@
 class Vidsheet < Formula
   desc "Local Synthesia-to-sheet-music tool (engine + web UI)"
   homepage "https://github.com/qwelpl/vidsheet-v2"
-  url "https://github.com/qwelpl/vidsheet-v2/archive/refs/tags/v0.1.1.tar.gz"
-  sha256 "85be65efe16694027e4333a4813f8dce91de329e2ea7c0922687737e891f2c0d"
+  url "https://github.com/qwelpl/vidsheet-v2/archive/refs/tags/v0.1.2.tar.gz"
+  sha256 "b6820306ebe17bf788f23fb739e5c0f67d5d315b639eeda282ed6b9f9075f25a"
 
   depends_on "ffmpeg"
   depends_on "node"
