@@ -3,7 +3,6 @@ class Vidsheet < Formula
   homepage "https://github.com/qwelpl/vidsheet-v2"
   url "https://github.com/qwelpl/vidsheet-v2/archive/refs/tags/v0.1.0.tar.gz"
   sha256 "62f07f5a06ba7cae31a9dad1b650e8936cf75ed09e514eefcc44043179ec877a"
-  version "0.1.0"
 
   depends_on "ffmpeg"
   depends_on "node"
@@ -17,7 +16,7 @@ class Vidsheet < Formula
     # Wrapper puts the brewed dependencies on PATH and points the launcher at
     # its read-only source in libexec. The launcher mirrors that into a writable
     # per-user data dir and builds the venv / web deps there on first run.
-    dep_bins = %w[python@3.12 node ffmpeg yt-dlp].map { |f| Formula[f].opt_bin }
+    dep_bins = %w[python@3.12 node ffmpeg yt-dlp].map { |f| formula_opt_bin(f) }
     (bin/"vidsheet").write <<~SH
       #!/bin/bash
       export VIDSHEET_SRC="#{libexec}"
